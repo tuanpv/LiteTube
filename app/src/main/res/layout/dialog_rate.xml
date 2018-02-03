@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:text="Audio Video Rocket"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_margin="5dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_rate"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text=""
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/btnRateUs"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/green_button"
+        android:text="Rate Us"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/btnLater"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/green_button"
+        android:text="Remind me later"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/green_button"
+        android:text="No, thanks"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"/>
+</LinearLayout>

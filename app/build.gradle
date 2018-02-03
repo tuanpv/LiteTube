@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.1'
+    defaultConfig {
+        applicationId "com.liteyoutube.youtubelite"/*"org.liteyoutube.videorocket"*/
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 2/*46*/
+        versionName "1.0"/*"0.11.5"*/
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        debug {
+//            multiDexEnabled true
+//
+//            debuggable true
+//            applicationIdSuffix ".debug"
+//        }
+//        beta {
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//
+//            applicationIdSuffix ".beta"
+//        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    supportLibVersion = '27.0.2'
+}
+dependencies {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2') {
+        exclude module: 'support-annotations'
+    }
+    implementation 'com.github.TeamNewPipe:NewPipeExtractor:1c97da8b51b3610'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:support-v4:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
+    implementation "com.android.support:preference-v14:$supportLibVersion"
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'ch.acra:acra:4.9.2'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.nirhart:ParallaxScroll:dd53d1f9d1'
+    implementation 'com.nononsenseapps:filepicker:3.0.1'
+    implementation 'com.google.android.exoplayer:exoplayer:r2.5.4'
+    debugImplementation 'com.facebook.stetho:stetho:1.5.0'
+    debugImplementation 'com.facebook.stetho:stetho-urlconnection:1.5.0'
+    debugImplementation 'com.android.support:multidex:1.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    implementation 'android.arch.persistence.room:rxjava2:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+    implementation 'frankiesardo:icepick:3.2.0'
+    annotationProcessor 'frankiesardo:icepick-processor:3.2.0'
+    compile 'com.google.android.gms:play-services-ads:11.8.0'
+}
